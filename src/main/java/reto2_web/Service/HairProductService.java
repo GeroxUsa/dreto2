@@ -62,6 +62,11 @@ public class HairProductService {
                 if (hairProducts.getPhotography() != null) {
                     accesoryDb.get().setPhotography(hairProducts.getPhotography());
                 }
+
+                if(hairProducts.getName() != null){
+                    accesoryDb.get().setName(hairProducts.getName());
+                }
+
                 accesoryDb.get().setAvailability(hairProducts.isAvailability());
                 hairProductsRepository.update(accesoryDb.get());
                 return accesoryDb.get();
