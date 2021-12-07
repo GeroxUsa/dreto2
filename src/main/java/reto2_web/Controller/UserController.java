@@ -70,4 +70,9 @@ public class UserController {
     public boolean emailExists(@PathVariable("email") String email) {
         return userService.emailExists(email);
     }
+
+//    @GetMapping("/{id}")
+//    public User getUser(@PathVariable("id") Integer id){
+//        return userService.getUserByID(id);
+//    }
 }

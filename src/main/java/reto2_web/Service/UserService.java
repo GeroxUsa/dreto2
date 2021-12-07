@@ -24,9 +24,16 @@ public class UserService {
         return userRepository.getAll();
     }
 
-    public Optional<User> getUser(int id) {
+    public User getUserByID(int id) {
         
+        return userRepository.getUser(id).orElse(new User ());
+
+    }
+
+    public Optional<User> getUser(int id) {
+
         return userRepository.getUser(id);
+
     }
 
     public User create(User user) {

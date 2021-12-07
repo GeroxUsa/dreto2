@@ -5,12 +5,18 @@
 package reto2_web.Model;
 
 import java.io.Serializable;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
+
+import javax.print.attribute.standard.DateTimeAtCompleted;
 
 /**
  *
@@ -23,10 +29,13 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @AllArgsConstructor
 @Document(collection = "user")
 public class User {
+
     @Id
     private Integer id;
     private String identification;
     private String name;
+    private Date birthtDay;
+    private String monthBirthtDay;
     private String address;
     private String cellPhone;
     private String email;
